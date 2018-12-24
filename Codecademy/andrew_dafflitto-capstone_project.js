@@ -89,13 +89,10 @@ _.drop = (array, n) => {
 
 _.dropWhile = (array, predicate) => {
   let dropNumber = array.findIndex((element, index) => !predicate(element, index, array));
-  let droppedArray = this.drop(dropNumber);
+  let droppedArray = _.drop(array, dropNumber);
   return droppedArray;
 };
-//the dropWhile test kept sending back an error that this.drop is not a function.
-//I tried _.drop and it sent an error that array.slice in the _.drop method is not a function, even though it passed all the tests.
-//I tried reaching out to a moderator, or anyone, on Slack; but, I have not recieved any feedback.
-//After googling and trying everything I could think of, I decided I had better submit this before the deadline passes.
+
 
 
 _.chunk = (array, size) => {
