@@ -1,13 +1,14 @@
+//The following mimick methods from the lodash.js library using ordinary javascript functionality.
+
 let _ = {};
 
-
+//_.clamp utilizes Math min and max methods to assign a given number a value between to given values (inclusive), 
+//or the same value if the original number falls in that range
 _.clamp = (num, min, max) => {
 	const lowerClampedValue = Math.max(num, min);
 	const clampedValue = Math.min(lowerClampedValue, max);
 	return clampedValue;
 };
-
-
 
 _.inRange = (number, start, end) => {
 	if (end === undefined) {
