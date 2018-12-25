@@ -19,7 +19,7 @@ _.inRange = (number, start, end) => {
     start = end;
     end = temp;
   };
-  let isInRange = (number >= start && number < end);
+  let isInRange = (number >= start && number <= end);
   return isInRange;
 };
 
